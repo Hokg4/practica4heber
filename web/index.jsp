@@ -14,11 +14,10 @@ List<Blog> lista = (List<Blog>) request.getAttribute("lista");
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css\fontello.css">
+	<link rel="stylesheet" href="css\estilos_2.css">
          <style type="text/css">
-             <%@include file="WEB-INF/css/fontello.css"%>
-	     <%@include file="WEB-INF/css/estilos_2.css"%>
-             <%@include file="WEB-INF/css/menu.css"%>
-             <%@include file="WEB-INF/css/blog.css"%>
+           
            
              body{
                  font-family: 'Open Sans', sans-serif;
@@ -43,31 +42,35 @@ List<Blog> lista = (List<Blog>) request.getAttribute("lista");
 	</div>
         </header>
        <main>
-		<section id="blog">
-		<h3>Lo ultimo de nuestro blog</h3>
-		<div class="contenedor">
-			
-	    <article>
-                <c:forEach var="blog" items="${lista}">
+	<section id="blog">
+	    
+	<div class="contenedor">
+             <h1>Lo ultimo de nuestro blog</h1>
+              <c:forEach var="blog" items="${lista}">
+	 <article>
+               
                 
-                    
                     <p>${blog.fecha}</p>
-                    <h1>${blog.titulo}</h1>
+                    <br>
+                    <h1 class="titulo-post">${blog.titulo}</h1>
+                    <br>
                     <h3>${blog.contenido}</h3>
-                    
-                 
-                    
-          <p><a href="MainController?op=editar&id=${blog.id}">Editar</a>
-          <a href="MainController?op=eliminar&id=${blog.id}"onclick="return(confirm('esta seguro??'))">Eliminar</a></p>
+                          
+          <p class="link"><a href="MainController?op=editar&id=${blog.id}">Editar</a>
+              <a href="MainController?op=eliminar&id=${blog.id}"
+             onclick="return(confirm('esta seguro??'))">Eliminar</a>
+          </p>
+            
+              <hr>
         </article> 
-                  <hr>
-		</div>
-	    </section >
-             </c:forEach>
+                 
+                  </c:forEach>
+            
+	</div>
+         </section >
+             
 		
 	</main>
-   
-           
-        
+    
     </body>
 </html>

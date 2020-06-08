@@ -1,0 +1,34 @@
+
+
+#blog{
+    margin-top: 50px;
+    position: relative;
+}
+
+#blog h1 {
+	text-align: center;
+}
+#blog  h3 {
+	text-align: left;
+}
+#blog .titulo-post {
+	text-align: center;
+}
+#blog .contenedor{
+    text-align: right;  
+}
+
+#blog .contenedor {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#blog article {
+	margin: 20px;
+}
+
+#blog .link{
+    text-decoration: underline;
+}
+

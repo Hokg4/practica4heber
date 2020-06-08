@@ -9,9 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css\estilos.css">
        
 	 <style type="text/css">
-		<%@include file="WEB-INF/css/estilos.css"%>
+		
 	</style>
         <title>JSP Page</title>
     </head>
@@ -27,6 +28,7 @@
 		<input type="text" name="usuario" placeholder="Usuario" class="input-48" required>
 		<input type="password" name="password" placeholder="Password" class="input-48" required>
 		<input type="submit" value="Ingresar" class="btn-enviar">
+                <br> <br>
 		
 	    </div>
             

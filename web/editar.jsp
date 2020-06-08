@@ -13,8 +13,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css\estilos_1.css">
         </style> <style type="text/css">
-		<%@include file="WEB-INF/css/estilos_1.css"%>
 	</style>
         <title>JSP Page</title>
     </head>
