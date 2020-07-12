@@ -76,11 +76,10 @@ public class MainController extends HttpServlet {
            
         Blog l = new Blog();
         request.setAttribute("blog", l);
-        request.getRequestDispatcher("editar.jsp").forward(request, response);    
+        request.getRequestDispatcher("nuevo.jsp").forward(request, response);    
       }
        if(op.equals("editar"))
       {
-          
             try {
                 int id = Integer.parseInt(request.getParameter(("id")));
                 String sql = "select * from blog where id = ?";
@@ -100,7 +99,7 @@ public class MainController extends HttpServlet {
                     b.setContenido(rs.getString("contenido"));
                         
                 }
-             request.setAttribute("Blog", b);
+             request.setAttribute("blog", b);
              request.getRequestDispatcher("editar.jsp").forward(request, response);
                 
             } catch (SQLException ex) {
@@ -172,7 +171,7 @@ public class MainController extends HttpServlet {
     
           try {
               
-              String sql = "update blog set fecha=?,titulo=?,contenido=?,where id=?";
+              String sql = "update blog set fecha=?,titulo=?,contenido=? where id=?";
               ps = conn.prepareStatement(sql);
               ps.setString(1, l.getFecha());
               ps.setString(2, l.getTitulo());
